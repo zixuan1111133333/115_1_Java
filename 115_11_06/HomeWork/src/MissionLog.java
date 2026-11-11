@@ -1,6 +1,37 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
+// 步驟紀錄類別
+class MissionStep {
+    private int command;
+    private String result;
+    private int energy;
+    private int samples;
+
+    public MissionStep(int command, String result, int energy, int samples) {
+        this.command = command;
+        this.result = result;
+        this.energy = energy;
+        this.samples = samples;
+    }
+
+    public int getCommand() {
+        return command;
+    }
+
+    public String getResult() {
+        return result;
+    }
+
+    public int getEnergy() {
+        return energy;
+    }
+
+    public int getSamples() {
+        return samples;
+    }
+}
+
 // 第五週只改日誌表示；行動規則與第四週完整輸出保持相同。
 public class MissionLog {
     public static void main(String[] args) {
@@ -59,8 +90,10 @@ public class MissionLog {
                     result = "UNKNOWN_COMMAND";
                     break;
             }
-            // 每讀一筆就建立一個新物件，記錄行動執行後的快照。
+            
             // TODO 4：在這裡一次新增本步的 MissionStep，包含拒絕、無效與返回。
+            // 將執行後的 command, result, energy, samples 紀錄為一個快照物件加入 history
+            history.add(new MissionStep(command, result, energy, samples));
         }
 
         String outcome;
@@ -96,12 +129,28 @@ public class MissionLog {
     static void printReplay(ArrayList<MissionStep> history) {
         System.out.println("=== replay ===");
         // TODO 5：依索引取出 MissionStep，以 getter 印出與第四週相同的逐步回放。
+        for (int i = 0; i < history.size(); i++) {
+            MissionStep step = history.get(i);
+            System.out.println("Step " + (i + 1) + ": cmd=" + step.getCommand() 
+                    + " -> " + step.getResult() 
+                    + " (energy=" + step.getEnergy() 
+                    + ", samples=" + step.getSamples() + ")");
+        }
     }
 
     static void printSummary(int scriptLength, ArrayList<MissionStep> history) {
         int ok = 0;
         int returned = 0;
+        
         // TODO 6：走訪 history，計算 OK 與 RETURN 筆數；後面的摘要與最低值已提供。
+        for (MissionStep step : history) {
+            if ("OK".equals(step.getResult())) {
+                ok++;
+            } else if ("RETURN".equals(step.getResult())) {
+                returned++;
+            }
+        }
+
         int steps = history.size();
         int rejected = steps - ok - returned;
         int ignored = scriptLength - steps;

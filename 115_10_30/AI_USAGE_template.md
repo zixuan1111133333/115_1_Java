@@ -4,10 +4,10 @@
 
 | 欄位 | 記錄 |
 |---|---|
-| 使用工具 | 待填 |
-| 使用目的與提問摘要 | 待填：資料結構需求或所選模擬錯誤 |
-| AI 建議與本人處理 | 待填：採納/拒絕理由、本人最後修改 |
-| 實際驗證結果 | 待填：反例、修改前後、重測，可引用講義 F3 |
+| 使用工具 | Gemini |
+| 使用目的與提問摘要 | 請AI提供MissionLog.java中TODO 1-TODO 5的程式碼實作，包含平行ArrayList的資料儲存與Collections 工具函式的應用|
+| AI 建議與本人處理 | 完全採納。AI提供了清單新增、countCommands陣列邊界檢查、逐步回放輸出，以及利用 Collections.frequency與min計算摘要與最低能源 |
+| 實際驗證結果 | 本人於 IDE 編譯執行 MissionLog，測試腳本 {1, 1, 2} 輸出 replay 步驟 1~3、counts[0..3]=[0, 2, 1, 0]、steps=3, ok=3, rejected=0, ignored=0、lowest energy=12，最終得到 SUCCESS，測試結果符合預期 |
 
 只記錄實際發生的操作。AI 宣稱正確不能取代編譯執行。不要上傳個資、密碼、憑證或未授權資料。
 

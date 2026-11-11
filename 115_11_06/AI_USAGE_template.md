@@ -4,10 +4,10 @@
 
 | 欄位 | 本人紀錄 |
 |---|---|
-| 使用工具／方式 | 待填：真實AI、教師模擬建議或未使用 |
-| 目的與提問摘要 | 待填：SampleCase需求設計／審查，或F3所選錯誤建議 |
-| 建議與本人處理 | 待填：採納／拒絕理由、本人修改內容 |
-| 本人實際驗證 | 待填：反例、修改前後與重測，可引用LAB_REPORT F3 |
+| 使用工具／方式 | Gemini |
+| 目的與提問摘要 | 請求實作 MissionStep 類別 (TODO 1-3) 與 MissionLog 類別 (TODO 4-6) 的程式碼，並確認物件欄位建構與歷史紀錄邏輯對齊 |
+| 建議與本人處理 | 完全採納。AI 補全 MissionStep 建構子與 getter/isSuccessful，並修訂 MissionLog 中 history.add 快照新增、printReplay 回放與 printSummary 統計 |
+| 本人實際驗證 | 本人於 IDE 編譯執行 MissionLog，測試腳本 {1, 1, 2} 輸出 replay 步驟 1~3、counts[0..3]=[0, 2, 1, 0]、steps=3, ok=3, rejected=0, ignored=0、lowest energy=12，最終得到 SUCCESS，測試結果符合預期 |
 
 AI 的正確宣稱不能代替編譯執行。觀看教師展示只能記「教師示範觀察」；本人複驗才可記本人測試。
 
