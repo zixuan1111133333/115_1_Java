@@ -50,7 +50,6 @@ public class Rover {
     // TODO 1：支援擴充及局部重構。先完成扣能源，跟做 explore，再獨立改 scan。
     // 這個方法只守住扣能源規則，不負責停止、加樣本或計次。
     protected boolean spendEnergy(int amount) {
-        // 佔位：尚未完成。本方法目前未接上 explore、scan，所以舊任務仍可執行。
         if (amount <= 0 || amount > energy) { return false; }
         energy -= amount;
         return true;

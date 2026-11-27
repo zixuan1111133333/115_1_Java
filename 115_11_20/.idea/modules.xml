@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/115_11_20.iml" filepath="$PROJECT_DIR$/115_11_20.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CompareExample/CompareExample.iml" filepath="$PROJECT_DIR$/CompareExample/CompareExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HomeWork/HomeWork.iml" filepath="$PROJECT_DIR$/HomeWork/HomeWork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StandAloneExample/StandAloneExample.iml" filepath="$PROJECT_DIR$/StandAloneExample/StandAloneExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/inheritanceexample/inheritanceexample.iml" filepath="$PROJECT_DIR$/inheritanceexample/inheritanceexample.iml" />
+    </modules>
+  </component>
+</project>

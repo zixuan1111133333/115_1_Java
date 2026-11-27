@@ -21,10 +21,24 @@ public class Mission {
         returned = false;
     }
 
-    // run：依序執行腳本中的指令並記錄日誌，直到腳本讀完、收到返回指令，或探測車停止。
+    // run：執行一次任務腳本。
+    // 依序執行腳本中的指令，每一筆的處理順序是：
+    // 1. 探測車已達標或耗盡能源，就停止，不再讀後面的指令。
+    //    沒讀到的指令不會進日誌，報表用「腳本長度 − 日誌筆數」算出略過幾筆。
+    // 2. 執行指令，取得結果字串（成功、能源不足、返回……）。
+    // 3. 把「指令、執行後的能源、結果」存成一筆 MissionStep 放進日誌。
+    // 4. 指令 0 代表返回：已經在第 3 步記錄過，接著標記 returned 並結束迴圈。
     public void run(int[] script) {
-        // TODO 1：逐筆執行。先檢查 isStopped；每讀一筆就保存行動後快照。
-        // 指令 0 也先記錄，再把 returned 設為 true 並離開迴圈。
+        for (int i = 0; i < script.length; i++) {
+            if (rover.isStopped()) { break; }
+            int command = script[i];
+            String result = rover.execute(command);
+            history.add(new MissionStep(command, rover.getEnergy(), result));
+            if (command == 0) {
+                returned = true;
+                break;
+            }
+        }
     }
 
     // getOutcome：回傳任務結果：「任務成功」「能源耗盡」「已返回」或「任務未完成」。
@@ -56,9 +70,14 @@ public class Mission {
     }
 
     // countOk：回傳日誌中結果為「成功」的筆數。
+    // 逐筆問日誌：「這一步成功了嗎？」成功就加 1。
+    // 判斷是否成功的字串比較寫在 MissionStep.isSuccessful()，這裡不必再寫 "成功".equals(...)。
     public int countOk() {
-        // TODO 2：走訪 history，以 isSuccessful 計算 成功 筆數。
-        return 0;
+        int ok = 0;
+        for (MissionStep step : history) {
+            if (step.isSuccessful()) { ok++; }
+        }
+        return ok;
     }
 
     // countRejected：回傳被拒絕的筆數。
@@ -73,9 +92,15 @@ public class Mission {
         return history.size() - countOk() - returns;
     }
 
-    // lowestEnergy：回傳日誌中最低的「執行後能源」；日誌是空的回傳 -1，表示沒有紀錄。
+    // lowestEnergy：找出日誌中最低的「執行後能源」。
+    // 日誌是空的就回傳 -1，表示「沒有紀錄」（MissionLog 在日誌為空時直接印「無紀錄」）。
+    // 否則先假設第一筆最低，再逐筆比較，遇到更低的就換成它。
     public int lowestEnergy() {
-        // TODO 3：空清單回傳 -1；非空先取第一筆，再以迴圈求最低能源。
-        return -1;
+        if (history.isEmpty()) { return -1; }
+        int lowest = history.get(0).getEnergy();
+        for (MissionStep step : history) {
+            if (step.getEnergy() < lowest) { lowest = step.getEnergy(); }
+        }
+        return lowest;
     }
 }

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0dd1889b-0f92-43f8-b778-ed7092dd6eb3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../115_11_20.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../115_11_27/AI_Check_Inheritance/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../115_11_27/AI_Check_Inheritance/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../115_11_27/AI_Check_Inheritance/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../115_11_27/AI_Check_Inheritance/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../115_11_27/AI_Check_Inheritance/AI_Check_Inheritance.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../115_11_27/AllTogether/AllTogether/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../115_11_27/AllTogether/AllTogether/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../115_11_27/AllTogether/AllTogether/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../115_11_27/AllTogether/AllTogether/AllTogether.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../115_11_27/OverRideExample/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../115_11_27/OverRideExample/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../115_11_27/OverRideExample/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../115_11_27/OverRideExample/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../115_11_27/OverRideExample/OverRideExample.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MissionLog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MissionStep.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HeavyRover.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rover.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="12" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3Mg8UCrhnZeNNYzfWOBE00Nqh7O" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MissionLog.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "nodejs_package_manager_path": "npm"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-63390994e64e-intellij.indexing.shared.core-IU-262.8665.337" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.8665.337" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0dd1889b-0f92-43f8-b778-ed7092dd6eb3" name="Changes" comment="" />
+      <created>1795760866191</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1795760866191</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
